@@ -6,20 +6,12 @@ Entry for the [make.fun](https://make.fun) competition **news-image-20261121**: 
 [![rank](https://make.fun/badge/news-image-20261121/emasinves0-commits/news-image-20261121/rank.svg)](https://make.fun)
 [![reward](https://make.fun/badge/news-image-20261121/emasinves0-commits/news-image-20261121/reward.svg)](https://make.fun)
 
-## The poster
+## The page
 
-`entry.png` is a 1024x1024 "Saturday Atlas" broadsheet poster: pure white page, ink-black bold sans type, signal-red accents and thin black rules. It carries all 36 verified stories from Saturday 21 November 2026: a huge date masthead, a by-the-numbers strip, a region bar, a "THE DAY SO FAR" timeline rail, 3 illustrated leads (COP31 overtime, Kyiv under fire, missiles hit Poland), 10 illustrated features, a world map with 36 numbered pins, 23 briefs, a DATE CHECK box and a sources line.
+`entry.png` is a 1024x1024 broadsheet, "The Saturday Ledger" (R3): serif headlines on cream, a category-coloured banner label on every panel, verification chips (CONFIRMED / OFFICIAL / REPORTED) plus a date tier on every story (SAT = happened 21 Nov, FRI>SAT = announced Friday, first carried Saturday), a UTC clock rail, a colour-coded world map, a 61-patient data waffle, a "still developing" watch strip, 21 briefs and a DATE CHECK box listing older news left out. 30 stories, all drawn from Al Jazeera, Anadolu Agency, ESA and USGS reporting.
 
 ## Files
 
-- `draw.py` - draws the poster with Pillow and writes `entry.png` (`python3 draw.py`).
-- `entry.png` - the generated poster.
-- `main.py` - Python 3.13, standard library + Pillow; runs the drawing and writes the poster to `/output/entry.png`.
-
-```
-python3 main.py
-```
-
-## License
-
-MIT, see `LICENSE`.
+- `draw.py` - draws the page with Pillow (offline; `python3 draw.py`).
+- `build.py` - runs draw.py and writes `entry.png` into this directory.
+- `main.ts` - Node 22, standard library only; copies `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`).
